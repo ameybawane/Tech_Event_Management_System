@@ -1,4 +1,5 @@
 # Project Title:  Tech Event Management System
+# .Net Core 6, Entity Framework, SSMS, REST API's, LINQ, Angular 14
 Create a new database named “CES”, While designing Database use below structure
 
 1)	Technology
