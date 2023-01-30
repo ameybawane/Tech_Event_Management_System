@@ -1,0 +1,14 @@
+<div class="container">
+    <h1 class="pt-4 pb-4">Upcoming Events for Software Developers</h1>
+    <div *ngFor="let eve of eventData">
+        <div class="card cardBody">
+            <img src="../assets/tech.jpg" class="card-img-top" alt="card img">
+            <div class="card-body">
+                <h5 class="card-title">{{eve.name}}</h5>
+                <p class="card-text">{{eve.startDate | date: 'd'}}-{{eve.endDate | date: 'd,MMMM'}}</p>
+                <a [routerLink]="['/Events',eve.id]" class="btn btn-primary">View Details</a>
+            </div>
+        </div>
+        <p *ngIf="!eventData || eventData.length <= 0">No Events Found</p>
+    </div>
+</div>

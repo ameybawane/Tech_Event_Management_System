@@ -1,0 +1,12 @@
+ALTER TABLE Events
+ADD CONSTRAINT chk_date
+CHECK(EndDate >= StartDate AND StartDate >= '2022-11-01');
+
+
+ALTER TABLE TalksDetails
+ADD CONSTRAINT chk_Time
+CHECK(DATEDIFF(HOUR,StartTime,EndTime)<=24);
+
+ALTER TABLE TalksDetails
+ADD CONSTRAINT chk_Time_Negative
+CHECK(DATEDIFF(HOUR,StartTime,EndTime)>=0);

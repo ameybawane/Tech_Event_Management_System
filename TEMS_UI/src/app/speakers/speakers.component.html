@@ -1,0 +1,13 @@
+<div class="container">
+    <h1 class="pt-4 pb-4">Speakers</h1>
+    <div *ngFor="let item of speakerData">
+        <div class="card cardBody">
+            <img src="../assets/speaker.png" class="card-img-top" alt="card img">
+            <div class="card-body">
+                <h5 class="card-title">{{item.name}}</h5>
+                <a [routerLink]="['/Speakers',item.id,'Events',urlId]" class="btn btn-primary">View Details</a>
+            </div>
+        </div>
+        <p *ngIf="!speakerData || speakerData.length <= 0">No Speakers Found</p>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 pt-4 pb-4">
+            <h1>Speaker</h1>
+        </div>
+        <div class="col-md-3 pt-4 pb-4">
+            <img class="speakerImg" src="../assets/speaker.png" width="60%" alt="speaker img">
+        </div>
+        <div class="col-md-9 ">
+            <h1>{{this.speakerName}}</h1>
+            <h4>{{this.speakerOrganisation}}</h4>
+            <p>{{this.speakerTwitterHandle}}</p>
+        </div>
+        <div class="col-md-12 pt-3">
+            <p>{{this.speakerDescription}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 pt-4 pb-4">
+            <h1>Talks and workshops</h1>
+        </div>
+        <div class="cardDiv" *ngFor="let item of talksData">
+            <div class="card cardBody">
+                <div>
+                    <b>{{item.title}}</b>
+                </div>
+                <div class="pt-4">
+                    <img src="../assets/speaker.png" class="speakerImg" width="10%" alt="speaker img">
+                    {{this.speakerName}}
+                </div>
+                <div class="pt-2">
+                    <p>Talk ({{item.duration}} min)</p>
+                </div>
+                <div class="pt-2">
+                    <p class="tagsDiv">{{item.tags}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
